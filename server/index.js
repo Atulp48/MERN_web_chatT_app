@@ -10,5 +10,5 @@ app.use(bodyParser.json({ extended: true }))
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/', route)
 Connection();
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => console.log(`server is listen at ${PORT}`));

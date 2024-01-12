@@ -11,7 +11,7 @@ conn.once('open', () => {
     gfs.collection('fs');
 });
 
-const url = 'http://localhost:8000';
+const url = process.env.URL;
 export const uploadFile = async (request,response) => {
 
     if(!request.file){
